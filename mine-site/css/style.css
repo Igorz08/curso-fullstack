@@ -1,13 +1,35 @@
+* {
+    margin: 0; /* <- fora do elemento*/
+    padding: 0; /* <- dentro do elemento*/
+    list-style: none;
+}
+
 body {
     background: #f5f5f5;
 }
 
 header {
+    height: 75px;
     background: #222;
     /* cor do texto */
     color: #fff;
+    
     display: flex;
-    justify-content: space-around;
+}
+
+.contentHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 1000px;
+    width: 100%;
+   /* border: 2px solid red; */
+    margin: 0 auto
+}
+
+header h1 {
+    margin: 15px;
 }
 
 header nav ul {
@@ -15,7 +37,13 @@ header nav ul {
 }
 
 header nav ul a {
+    padding: 20px;
     color: #fff;
     text-decoration: none;
     font-size: 18px;
+}
+
+header nav ul a:hover {
+    text-decoration: underline;
+    color: blue;
 }
