@@ -8,6 +8,15 @@ body {
     background: #f5f5f5;
 }
 
+.contentMain {
+    /* border: 2px solid red; */
+
+    /* centralizar */
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 header {
     height: 75px;
     background: #222;
@@ -47,4 +56,26 @@ header nav ul a {
 header nav ul a:hover {
     text-decoration: underline;
     color: blue;
+}
+
+/* carrossel */
+.carrossel article {
+    margin-top: 20px;
+}
+
+.carrossel img {
+    border-radius: 10px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+    padding: 20px;
+}
+
+.card {
+ background: #fff;
+ padding: 20px;
 }
