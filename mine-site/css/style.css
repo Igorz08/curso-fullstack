@@ -83,5 +83,29 @@ header nav ul a:hover {
  padding: 20px;
  margin-bottom: 20px;
  max-width: 200px;
- border: 1px solid grey
+ border: 1px solid grey;
+ border-radius: 10px;
+}
+
+/* extra */
+.extra {
+    background: #fff;
+    padding: 30px;
+    text-align: center;
+}
+
+/* footer */
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* pagina sobre */
+.paginaSobre h1 {
+    color: #191970;
+    padding-top: 10px;
+    border: 2px solid red;
 }
