@@ -1,5 +1,16 @@
-for (let x = 1; x <= 10; x++) {
- //   console.log("Esta é a",x+"ª vez que esta frase é exibida no console")
-    console.log(`Esta é a ${x}ª vez que esta frase é exibida no console`)
+const botoes = document.querySelectorAll(".accordion");
+const paneis = document.querySelectorAll(".panel");
 
+for (let i = 0; i < botoes.length; i++) {
+    
+    let numero = i;
+
+    botoes[numero].onclick = function() {
+        
+        if (paneis[numero].style.display == "block") {
+            paneis[numero].style.display = "none";
+        } else {
+            paneis[numero].style.display = "block"
+        }
+    }
 }
