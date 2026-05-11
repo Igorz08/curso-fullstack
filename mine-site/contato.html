@@ -28,7 +28,7 @@
             <h1>Página Contato</h1>
     </main>
 
-    <section>
+    <section class="contentHeader">
         <form>
             <article class="form-group">
                 <label for="nome">Nome</label>
@@ -39,6 +39,29 @@
                 <label for="Telefone">Telefone</label>
                 <input type="tel" id="Telefone">
             </article>
+
+             <article class="form-group">
+                <label for="Sexo">Sexo</label>
+                <select name="" id="Sexo">
+                    <option value="m">Masculino</option>
+                    <option value="f">Feminino</option>
+                </select>
+            </article>
+
+             <article class="form-group">
+                <h4>Deseja receber informações?</h4>
+                <label for="Sim">Sim</label>
+                <input type="checkbox" name="" id="Sim"/>
+            </article>
+
+            <article class="form-group">
+                <button>Enviar</button>
+            </article>
+
+            <article class="form-group">
+                <button formaction="cadastro.html">Cadastrar-se</button>
+            </article>
+
 
         </form>
     </section>
