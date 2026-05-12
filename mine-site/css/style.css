@@ -181,8 +181,9 @@ form button {
   background-color: rgb(39, 39, 234);
   color: white;
   cursor: pointer;
+  transition: 0.1s;
 }
 
-form button:hover {
+form button:hover { 
     background-color: rgb(80, 80, 255);
 }
