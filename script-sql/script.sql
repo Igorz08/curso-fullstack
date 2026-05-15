@@ -1,39 +1,48 @@
-show databases;
+use futebol;
 
-use kgt_bank;
-
--- Criando uma tabela
-CREATE TABLE conta (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	nome VARCHAR(50),
-    saldo DECIMAL,
-    senha VARCHAR(6)
+create table jogador (conta
+	id int primary key auto_increment,
+    nome varchar(50),
+    cidade varchar(50),
+    salario decimal
 );
 
--- Selecionar a tabela
-SELECT * FROM conta;
+select * from jogador;
 
--- Inserindo dados
-INSERT INTO conta (nome, saldo, senha)
-VALUES ('Doris', 10, '123');
+insert into jogador (nome, cidade, salario) values
+('Ronaldo Fenômeno', 'Rio de Janeiro', 10000),
+("Zinedine Zidane", 'Marselha', 5000),
+('Lucas moura', 'São Paulo', 3000);
 
-INSERT INTO conta (nome, saldo, senha)
-VALUES ('Um', 3000, '321');
+DELETE FROM jogador WHERE id=4;
 
-INSERT INTO conta (nome, saldo, senha)
-VALUES ('Pedro', 400, '1234');
+update jogador
+	set
+		nome = "Ronaldo Fenômeno Aposentado",
+        cidade = "Belo Horizonte",
+        salario = 20000
+	where id = 3;
+    
+update jogador
+	set
+		nome = "Lucas Moura Aposentado",
+        cidade = "Recife",
+        salario = 2000
+	where id = 5;
+    
+alter table jogador rename column salario to pagode;
 
-INSERT INTO conta (nome, saldo, senha)
-VALUES ('Pepe', 100, '1234');
-
--- Apagando dados do banco
-DELETE FROM conta WHERE id=3;
-
--- usuario
-
-use usuario;
-
-create table usuario (
-	id int primary key auto_increment
-    nome varchar(50)
+create table titulo (
+	id int primary key auto_increment,
+    nome varchar(50),
+    time varchar(40),
+    selecao varchar(40),
+    quantidade decimal
 )
+
+insert into titulo (nome, time, selecao, quantidade) values
+("sla", "bangu", "bangu alguma coisa", 9),
+('eunaosei', "botafogo", "AAAAAAAAAAAA", 4),
+('nomegenerico', "flamengo", 'tosemideia', 14);
+
+select * from titulo;
