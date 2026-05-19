@@ -2,6 +2,9 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
+// middleware
+app.use(express.static('public'));
+
 // variavel com os dados
 const alimentos = [
     {id: 1, nome: "Feijão", preco: 10},
@@ -35,6 +38,14 @@ app.get('/produtos', (req, res) => {
 app.get('/tipos-de-pratos', (req, res) => {
     res.send(tiposPratos);
 });
+
+// rota home
+app.get('/home', (req, res) => {
+    // console.log("Olá",__dirname)
+    res.sendFile(__dirname + '/public/index.html');
+});
+
+
 
 // Executando um servidor
 app.listen(port, () => {
